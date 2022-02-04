@@ -40,7 +40,6 @@ async function deleteFunction(collection,filter){
     await feisbrutDB.collection(collection).deleteOne(filter);
 }
 
-
 /* --------------------------------------------------------------CONNECTIONS------------------------------------------------------------------------ */
 async function run1() {
     await mongoClient.connect();
