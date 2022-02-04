@@ -2,6 +2,7 @@ require('dotenv').config({path: '.env'});
 const { MongoClient, ObjectId, ObjectID } = require("mongodb");
 const uri = process.env.NODE_HEROKU_URI_KEY;
 
+
 const dbURI = `mongodb+srv://feisbrut:${uri}@feisbrut-db.unhhv.mongodb.net/posts?retryWrites=true&w=majority`;
 const mongoClient = new MongoClient(dbURI);
 const dbURI2 = `mongodb+srv://feisbrut:${uri}@feisbrut-db.unhhv.mongodb.net/users?retryWrites=true&w=majority`;
@@ -39,6 +40,7 @@ async function insertFunction(collection,obj,filter){
 async function deleteFunction(collection,filter){
     await feisbrutDB.collection(collection).deleteOne(filter);
 }
+
 
 /* --------------------------------------------------------------CONNECTIONS------------------------------------------------------------------------ */
 async function run1() {
