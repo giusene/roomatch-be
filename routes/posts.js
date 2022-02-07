@@ -10,29 +10,29 @@ const {likesInfo} = require('../libs/likesInfo');
 const {notify} = require('../libs/notifyBody');
 
 
-let postsCollection = "posts";
+let postsCollection = "rooms";
 let usersCollection = "users"
 
 
 
  /* -----------------------------------------------------GLOBAL POST GET---------------------------------------------------------------------- */
-router.get("/posts", async (req, res) => {
-  let result = []
+router.get("/rooms", async (req, res) => {
+  // let result = []
   let posts = await findFunction(postsCollection);
-  posts.forEach((post) => {
+  // posts.forEach((post) => {
 
-    post = {
-      id:post.id,
-      authorId:post.authorId,
-      text:post.text,
-      date:post.date,
-      likes:post.likes,
-      comments:post.comments,
-      url:post.url
-    }
-    result.push(post);
-  });
-  res.send(result);
+  //   post = {
+  //     id:post.id,
+  //     authorId:post.authorId,
+  //     text:post.text,
+  //     date:post.date,
+  //     likes:post.likes,
+  //     comments:post.comments,
+  //     url:post.url
+  //   }
+  //   result.push(post);
+  // });
+  res.send(posts);
 });
 
   /* -----------------------------------------------------/GLOBAL POST GET---------------------------------------------------------------------- */

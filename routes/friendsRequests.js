@@ -4,7 +4,7 @@ const fs = require("fs");
 const router = express.Router();
 const config = require("../config");
 
-const dbURI = `mongodb+srv://Canstopme0:${config.uriKey}@fesibrut-api.dkfxl.mongodb.net/users?retryWrites=true&w=majority`;
+// const dbURI = `mongodb+srv://Canstopme0:${config.uriKey}@fesibrut-api.dkfxl.mongodb.net/users?retryWrites=true&w=majority`;
 const mongoClient = new MongoClient(dbURI);
 
 let feisbrutDB, usersCollection;

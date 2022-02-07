@@ -3,10 +3,12 @@ const { MongoClient, ObjectId, ObjectID } = require("mongodb");
 const uri = process.env.NODE_HEROKU_URI_KEY;
 
 
-const dbURI = `mongodb+srv://feisbrut:${uri}@feisbrut-db.unhhv.mongodb.net/posts?retryWrites=true&w=majority`;
+
+
+const dbURI = `mongodb+srv://roomatch:${uri}@roomatch.ufike.mongodb.net/roomatch?retryWrites=true&w=majority`;
 const mongoClient = new MongoClient(dbURI);
-const dbURI2 = `mongodb+srv://feisbrut:${uri}@feisbrut-db.unhhv.mongodb.net/users?retryWrites=true&w=majority`;
-const mongoClient2 = new MongoClient(dbURI2);
+// const dbURI2 = `mongodb+srv://feisbrut:${uri}@feisbrut-db.unhhv.mongodb.net/users?retryWrites=true&w=majority`;
+// const mongoClient2 = new MongoClient(dbURI2);
 
 let feisbrutDB, postsCollection,usersCollection;
 
@@ -48,8 +50,8 @@ async function run1() {
     console.log("siamo connessi con atlas Post!");
     console.log("siamo connessi con atlas Users!");
   
-    feisbrutDB = mongoClient.db("feisbrut");
-    postsCollection = feisbrutDB.collection("posts");
+    feisbrutDB = mongoClient.db("roomatch");
+    postsCollection = feisbrutDB.collection("rooms");
     usersCollection = feisbrutDB.collection("users");
   }
   

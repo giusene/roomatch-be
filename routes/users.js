@@ -144,8 +144,9 @@ router.post("/checksession/:id", async (req, res) => {
 /* -----------------------------------------------------USER GLOBAL GET---------------------------------------------------------------------- */
 router.get("/users", async (req, res) => {
   let data = await findFunction(collection);
-  let results = globalUsersGet(data);
-  res.send(results);
+  // let results = globalUsersGet(data);
+  // console.log(collection)
+  res.send(data);
 });
 /* -----------------------------------------------------/USER GLOBAL GET---------------------------------------------------------------------- */
 
